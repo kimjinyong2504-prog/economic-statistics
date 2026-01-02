@@ -1,0 +1,21 @@
+[build]
+  # 빌드 명령어 (필요 없음 - 정적 파일만 배포)
+  command = ""
+  # 배포할 디렉토리
+  publish = "."
+  # Functions 디렉토리 지정
+  functions = "netlify/functions"
+
+[build.environment]
+  # Node.js 버전 (Netlify Functions에 필요)
+  NODE_VERSION = "18"
+
+# Functions 설정
+[functions]
+  # 일반 Functions는 최대 10초, 하지만 실제로는 더 길게 설정 가능
+  # Background Functions는 최대 15분까지 가능
+  node_bundler = "esbuild"
+
+# Functions 경로는 리다이렉트에서 제외되므로 별도 설정 불필요
+# Netlify가 자동으로 /.netlify/functions/* 경로를 Functions로 라우팅합니다
+
