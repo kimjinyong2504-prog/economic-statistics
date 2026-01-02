@@ -100,4 +100,3 @@ netlify dev
 ```
 
 이렇게 하면 `http://localhost:8888`에서 사이트와 Functions를 함께 테스트할 수 있습니다.
-
